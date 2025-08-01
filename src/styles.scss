@@ -1,0 +1,59 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body{
+  background-color: #80CBC4;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --gap: 1rem;                /* Espacio estándar */
+  --max-content: 2000px;      /* Ancho máximo opcional */
+}
+
+// .app-container {
+//   display: flex;
+//   flex-direction: column;     /* Columnas por defecto */
+//   align-items: center;        /* Centrado horizontal */
+//   padding: var(--gap);
+//   margin: 0 auto;
+// }
+
+/* Contenedores flex */
+.layout-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.layout-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* Justificaciones */
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end   { justify-content: flex-end; }
+
+/* Alineación vertical si hace falta */
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end   { align-items: flex-end; }
+

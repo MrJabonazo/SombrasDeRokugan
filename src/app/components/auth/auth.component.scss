@@ -1,0 +1,59 @@
+.centrado-flex {
+  display: flex;
+  justify-content: center;  /* Centrado horizontal */
+  align-items: center;      /* Centrado vertical */
+  height: 100vh;            /* Altura completa de la ventana */
+}
+
+mat-card {
+  max-width: 29rem;
+  width: 100%;
+  min-height: 20rem;       /* Deja crecer según contenido */
+  margin: 2rem auto;       /* Centrado vertical u horizontal */
+  padding: 2rem 1.5rem 1.5rem;    /* 2rem arriba, 1.5rem laterales y abajo */
+  box-sizing: border-box;
+}
+
+.mat-divider {
+  border-color: #EEEEEE;       /* Usando Gris 200 */
+}
+
+.card-header {
+  padding-top: 1rem;    /* Espacio extra sobre el título */
+  padding-bottom: 0.5rem;
+  display: flex;               /* si no lo hereda, repítelo */
+  justify-content: center;     /* centra hijos en el eje horizontal */
+  align-items: center;         /* centra hijos en el eje vertical */
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+  display: block;        /* asegura que respete el 100% */
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.btn-init {
+  background-color: #26A69A;
+}
+
+.btn-create {
+  background-color: #3d354b;
+}
+
+@media (max-width: 600px) {
+  mat-card {
+    max-width: 90%;        /* Ajusta al ancho de móvil */
+    margin: 1rem auto;
+  }
+}
