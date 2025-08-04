@@ -7,22 +7,27 @@ import { MatDividerModule } from '@angular/material/divider';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'app-signin',
   imports: [
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatDividerModule,
-  ],
-  templateUrl: './auth.component.html',
-  styleUrl: './auth.component.scss',
+            MatCardModule,
+            MatInputModule,
+            MatFormFieldModule,
+            MatButtonModule,
+            MatDividerModule
+          ],
+  templateUrl: './signin.component.html',
+  styleUrl: './signin.component.scss'
 })
-export class AuthComponent {
+export class SigninComponent {
 
   constructor(private router: Router) { }
 
   logIn = () => {
     this.router.navigate(['/Home']);
   }
+
+  signUp = () => {
+    this.router.navigate(['/Singup']);
+  }
+
 }
